@@ -21,7 +21,7 @@ class RockPaperScissors
 			n += 1
 			player = %Q|@player#{n}|
 					
-			if n == 2 then
+			if    n == 2 then
 			
 				(instance_variable_get player)[:name] = %q|Computer|
 			
@@ -73,7 +73,7 @@ class RockPaperScissors
 			
 			self.clear
 			
-			if ply_choice.match(%r~^Q(?:uit)?$~i)
+			if    ply_choice.match(%r~^Q(?:uit)?$~i)
 			
 				print %q|> |
 				puts  %q|Quitting!|.red
