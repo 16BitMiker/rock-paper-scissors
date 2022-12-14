@@ -203,9 +203,11 @@ class RockPaperScissors
 	def victory(n)
 	
 		player = %Q|@player#{n}|
+		
+		color = n == 2 ? %q|red| : %q|green|
 	
 		print %q|> |
-		puts  %Q|#{(instance_variable_get player)[:name]} Wins!|.green
+		puts  %Q|#{(instance_variable_get player)[:name]} Wins!|.send(color)
 		
 		exit 0
 		
@@ -214,10 +216,10 @@ class RockPaperScissors
 	def status
 	
 		print %Q|> #{@player1[:name]}: |
-		puts  %Q|#{@player1[:wins]} / #{@totalNum} wins|.yellow
+		puts  %Q|#{@player1[:wins]} / #{@totalNum} wins|.blue
 		
 		print %Q|> #{@player2[:name]}: |
-		puts  %Q|#{@player2[:wins]} / #{@totalNum} wins|.yellow
+		puts  %Q|#{@player2[:wins]} / #{@totalNum} wins|.blue
 	
 	end
 
