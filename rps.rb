@@ -57,11 +57,11 @@ class RockPaperScissors
 			
 			puts %q|=|*25
 			
-			puts %q|Choice:|.yellow
+			puts %q|Choice:|
 			
 			@rps.each_with_index do |v,k|
 			
-				puts  %Q|#{k.to_s.yellow + %q|:|.yellow} #{v}|
+				puts  %Q|#{k.to_s + %q|:|} #{v.blue}|
 				
 			end
 			
@@ -168,7 +168,7 @@ class RockPaperScissors
 	def tie 
 		
 		print %q|> |
-		puts  %q|Tie Declared! No Winner This Round!|.red
+		puts  %q|Tie Declared! No Winner This Round!|.yellow
 		
 		self.status
 	
